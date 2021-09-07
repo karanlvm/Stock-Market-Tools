@@ -11,7 +11,7 @@ end = dt.datetime.now()
 
 # Load the data
 
-data = web.DataReader('AAPL', 'yahoo', start, end)
+data = web.DataReader('GS', 'yahoo', start, end)
 
 # Data Formatting
 

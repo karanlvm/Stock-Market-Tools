@@ -11,8 +11,8 @@ from tensorflow.keras.layers import Dense, Dropout, LSTM
 #Load Data
 company = 'GS'
 
-start = dt.datetime(2012,1,1)
-end = dt.datetime(2020,1,1)
+start = dt.datetime(2017,1,1)
+end = dt.datetime(2021,1,1)
 
 data = web.DataReader( company, 'yahoo', start, end)
 
@@ -20,7 +20,7 @@ data = web.DataReader( company, 'yahoo', start, end)
 scaler = MinMaxScaler(feature_range=(0.,1))
 scaled_data = scaler.fit_transform(data['Close'].values.reshape(-1,1))
 
-prediction_days = 60
+prediction_days = 360
 
 x_train = []
 y_train = []
